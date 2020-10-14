@@ -18,7 +18,12 @@ services:
       - mongo
 
   mongo:
+    container_name: mongo36
     image: mongo:3.6
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
 
   mongo-express:
     image: mongo-express
